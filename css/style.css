@@ -1,11 +1,11 @@
 body, q, h1, h2, footer {
     margin: 0;
     padding: 0;
-    border:0;
+    border: 0;
 }
 
 q, h1, h2 {
-    margin:15px 0;
+    margin: 15px 0;
 }
 
 body {
