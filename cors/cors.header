@@ -1,3 +1,2 @@
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Credentials: true
-Content-Type: text/html; charset=utf-8
+<!DOCTYPE HTML>
+<script src="//cdn.rawgit.com/jpillora/xdomain/0.6.15/dist/0.6/xdomain.min.js" master="https://the-shiny.github.io"></script>
