@@ -9,8 +9,6 @@
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script type="text/javascript" src="js/coffee-script.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="js/cors.js"></script>
-            <script src="//cdn.rawgit.com/jpillora/xdomain/0.6.15/dist/0.6/xdomain.min.js" slave="https://the-shiny.github.io/AllDev/cors/cors.header"></script>
             <script type="text/coffeescript" src="coffeescripts/ajax.coffee"></script>
             <title id = "title">Tytuł</title>
         </head>
@@ -32,14 +30,14 @@
             </div>
             <div id = "video_pattern"></div>
             <video id = "video_background" autoplay loop>
-                <source src="https://the-shiny.github.io/AllDev/webm/movie.webm" type="video/webm">
+                <source src="webm/movie.webm" type="video/webm">
             </video>
             <footer>
                 <canvas id="music" width="1024" height="250" style="display: block;">Czyżby canvas nie zadziałał?</canvas>
             </footer>
             <script src="js/equalizer.js" type="text/javascript"></script>
             <script type="text/coffeescript">
-                loadSound "http://the-shiny.github.io/AllDev/webm/Thomas Bergersen - Final Frontier.webm"
+                loadSound "webm/Thomas Bergersen - Final Frontier.webm"
             </script>
         </body>
     </html>
