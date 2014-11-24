@@ -1,4 +1,4 @@
-body, q, h1, h2, footer {
+body, q, h1, h2, div#equalizer {
     margin: 0;
     padding: 0;
     border: 0;
@@ -74,32 +74,48 @@ body {
     margin-left: 7px;
 }
 
-#video_background {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    overflow: hidden;
+#video-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+
 }
 
-#video_pattern {
-    background-image: url(background.png);
-    position: fixed;
-    opacity: 0.8;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100;
-    z-index: 1;
+#video-bg > video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-video {
-    display: block;
+@media (min-aspect-ratio: 16/9) {
+	#video-bg > video {
+		height: 300%;
+		top: -100%;
+	}
 }
+
+@media (max-aspect-ratio: 16/9) {
+	#video-bg > video {
+		width: 300%;
+		left: -100%;
+	}
+}
+
+@supports (object-fit: cover) {
+	#video-bg > video {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+} 
 
 .clearfix:before, .clearfix:after {
     content: " ";
@@ -110,14 +126,16 @@ video {
     clear: both;
 }
 
-footer {
-    position: absolute;
-    bottom: 0px;
-    width: 90%;
-    margin: 0 5%;
+div#equalizer {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+    width: 100%;
+    margin: 0;
 }
 
 canvas#music {
-    height: 135px;
+    display: block;
     width: 100%;
+	height: 150px;
 }
