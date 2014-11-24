@@ -93,6 +93,20 @@ body {
 	height: 100%;
 }
 
+@media (min-aspect-ratio: 4/3) {
+	#video-bg > video {
+		height: 100%;
+		top: 0%;
+	}
+}
+
+@media (max-aspect-ratio: 4/3) {
+	#video-bg > video {
+		width: 100%;
+		left: 0%;
+	}
+}
+
 @media (min-aspect-ratio: 16/9) {
 	#video-bg > video {
 		height: 300%;
