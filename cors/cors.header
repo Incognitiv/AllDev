@@ -1,0 +1,3 @@
+Access-Control-Allow-Origin: http://the-shiny.github.io/AllDev
+Access-Control-Allow-Credentials: true
+Content-Type: text/html; charset=utf-8

@@ -6,9 +6,15 @@
             <link rel="icon" type="image/png" href="/media/layout/favicon.png" />
             <link href="css/style.css" rel="stylesheet" type="text/css" /> 
             <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script type="text/javascript" src="js/coffee-script.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/cors.js"></script>
+            <script type="text/javascript">
+                var url = "http://the-shiny.github.io/AllDev/cors/cors.header";
+                var xhr = createCORSRequest("GET", url);
+                xhr.send()
+            </script>
             <script type="text/coffeescript" src="coffeescripts/ajax.coffee"></script>
             <title id = "title">Tytuł</title>
         </head>
