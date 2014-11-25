@@ -35,7 +35,7 @@ function playSound(buffer) {
     sourceNode.buffer = buffer;
     sourceNode.start(0);
     var x = document.getElementById("get_time");
-    x.innerHTML = (x.currentTime);
+    x.innerHTML = (buffer.currentTime);
 }
 
 function onError(e) {
