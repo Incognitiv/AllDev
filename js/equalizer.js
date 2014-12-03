@@ -34,6 +34,9 @@ function playSound(buffer) {
     "use strict";
     sourceNode.buffer = buffer;
     sourceNode.start(0);
+    window.setInterval(function (e) {
+    	console.log(sourceNode.context.currentTime);
+    }, 1000);
 }
 
 function onError(e) {
