@@ -4,13 +4,7 @@ try {
 } catch(e) {
     throw Error("AudioContext not found!");
 }
- 
-/* if (!window.AudioContext) {
-    if (!window.webkitAudioContext) {
-        alert('AudioContext not found!');
-    }
-    window.AudioContext = window.webkitAudioContext;
-} */
+
 var context = new AudioContext();
 var audioBuffer;
 var sourceNode;
@@ -40,7 +34,7 @@ function loadSound(url) {
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
     request.responseType = 'arraybuffer';
-    request.onload = function() {
+    request.onloadend = function() {
         context.decodeAudioData(request.response, function(buffer) {
             playSound(buffer);
         }, onError);
